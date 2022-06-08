@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+<meta charset="UTF-8">
+<title>Miss Tradition Congo 2021</title>
+   <!-- bootstrap-datetimepicker -->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./bootstrap.css">
+</head>
+<body>
+<!-- main -->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="container text-center">
+            <div class="card pt-4 mt-5 mb-3 pr-3 pl-4 ">
+              <div class="head">
+                <img src="logo.jpg" style="height: 90px; width: 150px;">
+                <h2 id="heading">ELECTION MISS TRADUTION CONGO</h2>
+              </div>
+                <p>Veillez remplir tous les champs obligatoir</p>
+                <form id="msform" action="datadb.php" method="POST">
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active" id="personal"><strong>Information Personnelle</strong></li>
+                        <li id="personal"><strong>Qualification</strong></li>
+                        <li id="payment"><strong>Information Ethnique</strong></li>
+                         <li id="personal"><strong>Profile</strong></li>
+                        <li id="payment"><strong>Ambitions</strong></li>
+                        <li id="confirm"><strong>Envoyer</strong></li>
+                    </ul>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> <br> 
+                    <!-- fieldsets -->
+
+                    <!-- Information Personnelle -->
+                    <fieldset>
+                    <div class="form-card">
+                         <div class="row">
+                            <div class="col-7">
+                                <h2 class="fs-title">Information Personnelle:</h2>
+                            </div>
+                            <div class="col-5">
+                               <h2 class="steps">Etape 1 - 6</h2>
+                            </div>
+                         </div>
+
+                     <!-- Information personnelle forme -->
+                          <div class="container row">
+                            <div class="col-md-6">
+                                 <label class="fieldlabels">Nom(s): <span class="text-danger">*</span>
+                                 </label> 
+                                 <input type="text" name="fname" placeholder="Entrer votre nom de famille" required="required"/> 
+                            </div>
+                            <div class="col-md-6">
+                                 <label class="fieldlabels">Prenom(s): <span class="text-danger">*</span>
+                                 </label> 
+                                 <input type="text" name="lname" placeholder="Entrer vos prenoms de famille" required="required" /> 
+                            </div>
+                             <div class="col-md-6">
+                                 <label class="fieldlabels">Date de Naissance: <span class="text-danger">*</span>
+                                 </label> 
+                                 <input type="date" name="dateofbirth" min="1990-01-01" max="2000-12-31" placeholder="dd-mm-yyyy" required="required"/> 
+                            </div>
+                             <div class="col-md-6">
+                                 <label class="fieldlabels">Ville Actuelle: <span class="text-danger">*</span>
+                                 </label> 
+                                 <select class="form-group" name="ville" required="required" >
+                                     <option value="" hidden="hidden">choisir la ville</option>
+                                     <option value="Brazzaville">Brazzaville</option>
+                                     <option value="Pointe-Noire">Pointe-Noire</option>
+                                     <option value="Dolisie">Dolisie</option>
+                                     <option value="Nkayi">Nkayi</option>
+                                     <option value="Loudima">Loudima</option>
+                                     <option value="Sibiti">Sibiti</option>
+                                     
+                                 </select> 
+                            </div>
+                            <div class="col-md-12">
+                                 <label class="fieldlabels">Adresse: <span class="text-danger">*</span>
+                                 </label> 
+                                 <input type="text" name="adress" placeholder="Entrer votre adresse actuelle" required="required"/> 
+                            </div>
+                            <div class="col-md-6">
+                                 <label class="fieldlabels">Téléphone: <span class="text-danger">*</span>
+                                 </label> 
+                                 <input type="number" name="phone" placeholder="Entrer votre numéro de téléphone" required="required"/> 
+                            </div>
+                            <div class="col-md-6">
+                                 <label class="fieldlabels">Email: <span class="text-danger">*</span>
+                                 </label> 
+                                 <input type="email" name="email" placeholder="Entrer votre adresse electronique" required="required"/> 
+                            </div>
+
+                          
+                         </div>
+                        </div> 
+                   
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                <!-- /Information personnelle forme -->
+
+                <!-- Qualification -->
+                    <!--  -->
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Qualification:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Etape 2 - 6</h2>
+                                </div>
+                            </div> 
+                            <div class="col-md-6">
+                                 <label class="fieldlabels">Niveau d'Etude: <span class="text-danger">*</span>
+                                 </label> 
+                                 <select class="form-group" name="niveau" required="required">
+                                     <option value="" hidden="hidden">choisir le niveau</option>
+                                     <option value="Secondaire">Secondaire</option>
+                                    <option value="Universitaire">Universitaire</option>
+                                     <option value="Autre">Autre</option>
+                                 </select> 
+                            </div>
+                             <div class="col-md-6">
+                                 <label class="fieldlabels">Dernier Diplôme: <span class="text-danger">*</span>
+                                 </label> 
+                                 <select class="form-group" name="diplome" required="required">
+                                    <option value="" hidden="hidden">choisir le diplôme</option>
+                                     <option value="BEPEC">BEPEC</option>
+                                     <option value="BAC">BAC</option>
+                                     <option value="BTS">BTS</option>
+                                     <option value="License">License</option>
+                                     <option value="Master">Master</option>
+                                     <option value="Autre">Autre</option>
+                                 </select> 
+                            </div>
+                            <div class="col-md-6">
+                                 <label class="fieldlabels">Situation Actuelle: <span class="text-danger">*</span>
+                                 </label> 
+                                 <select class="form-group" name="situation" required="required">
+                                    <option value="" hidden="hidden">choisir le situation</option>
+                                     <option value="Etudiant">Etudiant</option>
+                                     <option value="Travailleur">Travailleur</option>
+                                     <option value="Sans emploi">Sans emploi</option>
+                                 </select> 
+                            </div>
+                        </div> 
+
+                        <input type="button" name="next" class="next action-button" value="Next" /> 
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                    </fieldset>
+                    <!-- Qualification -->
+
+                    <!-- Information Ethnique -->
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Information Ethnique:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Etape 3 - 6</h2>
+                                </div>
+                            </div> 
+                             <div class="col-md-6">
+                                 <label class="fieldlabels">Département: <span class="text-danger">*</span>
+                                 </label> 
+                                 <select class="form-group" name="departement" required="required">
+                                     <option value="" hidden="hidden">choisir le département</option>
+                                     <option value="Pool">Pool</option>
+                                     <option value="Niari">Niari</option>
+                                     <option value="Bouenza">Bouenza</option>
+                                     <option value="Kouilou">Kouilou</option>
+                                     <option value="Lekoumou">Lekoumou</option>
+                                     <option value="Cuvette">Cuvette</option>
+                                     <option value="Plateaux">Plateaux</option>
+                                 </select> 
+                            </div>
+                             <div class="col-md-6">
+                                 <label class="fieldlabels">Nom de l'Ethnie: <span class="text-danger">*</span>
+                                 </label> 
+                                 <input type="text" name="ethnie" placeholder="Entrer le nom de l'ethnie" required="required">
+                            </div>
+                        </div> 
+
+                        <input type="button" name="next" class="next action-button" value="Next" /> 
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <!-- /Information Ethnique -->
+
+                    <!-- Profile -->
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Profile:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Etape 4 - 6</h2>
+                                </div>
+                            </div> 
+                             <div class="col-md-6">
+                                 <label class="fieldlabels">Taille: <span class="text-danger">*</span>
+                                 </label> 
+                                 <select class="form-group" name="taille" required="required">
+                                     <option value="" hidden="hidden">choisir la taille</option>
+                                     <option value="1.5-1.6">Entre 1.5 - 1.6 m</option>
+                                     <option value="1.7-1.8">Entre 1.7 - 1.8 m</option>
+                                     <option value="1.8-more">Plus de 1.8 m</option>
+                                 </select> 
+                            </div>
+                            <div class="col-md-6">
+                                 <label class="fieldlabels">Link du profile FaceBook ou Instagram: <span class="text-danger">*</span>
+                                 </label> 
+                                <input type="text" name="social_media" placeholder=" Entrer le link de votre profile FaceBook ou Instagram" required="required">
+                            </div>
+                            <div class="col-md-6">
+                                 <label class="fieldlabels">Parlez de vous en quelques lignes: <span class="text-danger">*</span>
+                                 </label> 
+                                <textarea name="description" cols="5" rows="5" placeholder="Parlez nous de vous en quelques lignes" required="required"></textarea>
+                            </div>
+                        </div> 
+
+                        <input type="button" name="next" class="next action-button" value="Next" /> 
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+
+                        <!-- Ambitions -->
+                    </fieldset>
+                         <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Ambitions:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Etape 5 - 6</h2>
+                                </div>
+                            </div>
+                           <div class="container row">
+                            <div class="col-md-6">
+                                 <label class="fieldlabels">Si vous étiez élu Miss Tradition et culture congolaise <br>  
+                                  Quel serait votre rêve ?                                           
+                              : <span class="text-danger">*</span>
+                                 </label> 
+                                <textarea name="dreams" cols="5" rows="5" placeholder="Parlez nous de vous en quelques lignes" required="required"></textarea>
+                            </div> 
+                            <div class="col-md-6">
+                                 <label class="fieldlabels">Quelle est vos ambitions dans la vie ? : <span class="text-danger">*</span>
+                                 </label> 
+                                <textarea name="ambitions" cols="5" rows="5" placeholder="Parlez nous de vous vos ambitions quelques lignes" required="required"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                 <label class="fieldlabels">Avez-vous déjà participé à un concours de Beauté? : <span class="text-danger">*</span>
+                                 </label> 
+                                <textarea name="already" cols="5" rows="5" placeholder="Avez-vous déjà participé à un concours de Beauté?" required="required"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                 <label class="fieldlabels">Comment avez-vous entendu parler de notre casting: <span class="text-danger">*</span>
+                                 </label> 
+                                <textarea name="casting" cols="5" rows="5" placeholder="Parlez nous de vous en quelques lignes" required="required"></textarea>
+                            </div>
+                          </div>
+                        </div> 
+                        <input type="button" name="next" class="submit action-button" value="Next" /> 
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Envoyé:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Etape 6 - 6</h2>
+                                </div>
+                            </div> <br><br>
+                            <h2 class="purple-text text-center"><strong>Envoyé !</strong></h2> <br>
+                            <div class="row justify-content-center">
+                                <div class="col-3"> 
+                                  <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                            </div> <br><br>
+                            <div class="row justify-content-center">
+                                <div class="col-7 text-center">
+                                    <h5 class="purple-text text-center">Votre appliaction a été envoyé avec succès!!</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                        <a href="index.html" class="btn btn-success">OK</a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="col-md-12 text-center mt-5">Copyright 2020, by Phoenone</div>
+</footer>
+<!-- partial -->
+  <script src='./jquery.min.js'></script>
+  <script  src="./script.js"></script>
+</body>
+</html>
